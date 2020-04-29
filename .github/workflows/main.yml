@@ -1,0 +1,13 @@
+name: firestore-start
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Start Firestore
+      uses: mickfeech/firestore-emulator-action@0.0.3
+      with: 
+        fireStoreProjectID: psia-nw-staff-scheduling
